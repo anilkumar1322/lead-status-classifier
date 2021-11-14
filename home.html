@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>lead message input</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body background="https://www.xmple.com/wallpaper/blue-gradient-white-linear-3840x2160-c2-87cefa-ffffff-a-270-f-14.svg">
+<p><h1 style="color:blue;font-size:60;text-align: center;">Lead Status Classifier</h1></p>
+<div class="container">
+<div class="row">
+
+
+    <h2><p style="color:cornflowerblue;font-size:20;text-align: center;"><b>Enter Lead meassages to get to know wether lead going to be converted or not converted</b></p></h2>
+    
+
+    <form action="{{ url_for('msg_prediction')}}" method="POST">
+		<p>Enter Lead Message</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="3" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+	</form>
+	
+	<h2> </h2> 
+	  
+	  
+	  <h2><p style="color:cornflowerblue;font-size:20;text-align: center;"><b>Enter Lead meassages with Location and Exicutive Name</b></p></h2>
+	  
+    <form action="{{ url_for('msg_name_loc_prediction')}}" method="POST">
+		<p>Enter Lead Message</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="3" cols="50"></textarea>
+		
+	    <p>Enter Location</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="location" rows="1" cols="50"></textarea>
+		
+		<p>Enter Executive Name</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="executive_name" rows="1" cols="50"></textarea>
+
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+	</form>
+       
+    
+</div>
+</div>
+</body>
+</html>
